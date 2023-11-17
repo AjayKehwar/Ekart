@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekart</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="stick">
+      <div class="header">
+        <div class="head">
+          <div class="logodiv">
+            <div class="logo"></div>
+            <div class="cart" onclick="document.location='itemsCart.html'">
+                <div class="count">
+                    <span id="cartCount"><b>0</b></span>
+                </div>
+            </div>
+          </div>
+          <div class="searchdiv">
+            <input class="input"type="text"placeholder=" What is on your mind today?"/>
+            <button class="btn">Search</button>
+          </div>
+          <div class="logindiv">
+            <button class="signin slgn" onclick="document.location='signIn.html'">SignIn</button>
+            <button class="login slgn" onclick="document.location='login.html'">LogIn</button>
+            <a href="">ContactUs</a>
+          </div>
+        </div>
+        <div class="headnav">
+          <ul class="navul">
+            <li class="navli">MEN</li>
+            <li class="navli">WOMEN</li>
+            <li class="navli">CHILD</li>
+            <li class="navli">HOME & KITCHEN</li>
+            <li class="navli">MOBILE & MORE</li>
+            <li class="navli">SPORTS & MORE</li>
+            <li class="navli">OTHERS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="maindiv">
+      <div class="layout1">
+        <div class="lay11">
+            <div class="imgdiv"></div>
+            <div id="cartDiv" class="cartDiv">
+                  <h2>Shopping Cart</h2>
+                <ul id="cartItems" style="list-style-type:none;"></ul>
+                <p>Total: ₹<span id="total">0</span></p>
+                <button onclick="checkout()">Checkout</button>
+
+            </div>
+        </div>
+        <div class="lay12">
+            <div class="img1 layimg"></div>
+            <div class="img2 layimg"></div>
+            <div class="img3 layimg"></div>
+        </div>
+      </div>
+      <h2 class="heading fnt">Branded Deals</h2>
+      <div class="layout2 layout">
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/mob2.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="1" class="imglaytext">
+                <h4 class="imgpara fnt">HOTLINE H310</h4>
+                <p id="cost1" class="imgpara2 fnt"> <b>₹589</b> <strike> ₹1599</strike><span class="discount_off"> <b> 63% off</b></span></p>
+                <button id="btn1" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/clth2.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="2" class="imglaytext">
+                <h4 class="imgpara fnt">Modernity Dark Blue</h4>
+                <p id="cost2" class="imgpara2 fnt"> <b>₹499</b> <strike> ₹1299</strike><span class="discount_off"> <b> 62% off</b></span></p>
+                <button id="btn2" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/clth3.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="3" class="imglaytext">
+                <h4 class="imgpara fnt">Oceanista Orange Floral</h4>
+                <p id="cost3" class="imgpara2 fnt"> <b>₹389</b> <strike> ₹1999</strike><span class="discount_off"> <b> 81% off</b></span></p>
+                <button id="btn3" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/facewash.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="4" class="imglaytext">
+                <h4 class="imgpara fnt">The Menshine Anti Acne</h4>
+                <p id="cost4" class="imgpara2 fnt"> <b>₹219</b> <strike> ₹499</strike><span class="discount_off"> <b> 56% off</b></span></p>
+                <button id="btn4" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/sketch1.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="5" class="imglaytext">
+                <h4 class="imgpara fnt">Sketchfeb Om Bhur Bhurva</h4>
+                <p id="cost5" class="imgpara2 fnt"> <b>₹399</b> <strike> ₹999</strike><span class="discount_off"> <b> 60% off</b></span></p>
+                <button id="btn5" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/facewash2.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="6" class="imglaytext">
+                <h4 class="imgpara fnt">Globus Naturals Charcoal</h4>
+                <p id="cost6" class="imgpara2 fnt"> <b>₹199</b> <strike> ₹1999</strike><span class="discount_off"> <b> 90% off</b></span></p>
+                <button id="btn6" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+      </div>
+
+      <h2 class="heading fnt">Deals of the day</h2>
+      <div class="layout3 layout">
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/mob3.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="7" class="imglaytext">
+                <h4 class="imgpara fnt">Wox Mobile Holding Tablet</h4>
+                <p id="cost7" class="imgpara2 fnt"> <b>₹215</b> <strike> ₹534</strike><span class="discount_off"> <b> 60% off</b></span></p>
+                <button id="btn7" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/sketch2.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="8" class="imglaytext">
+                <h4 class="imgpara fnt">Sketchfab Om Asha...</h4>
+                <p id="cost8" class="imgpara2 fnt"> <b>₹259</b> <strike> ₹999</strike><span class="discount_off"> <b> 74% off</b></span></p>
+                <button id="btn8" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/mob4.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="9" class="imglaytext">
+                <h4 class="imgpara fnt">Apple iPhone</h4>
+                <p id="cost9" class="imgpara2 fnt"> <b>₹8999</b> <strike> ₹29999</strike><span class="discount_off"> <b> 70% off</b></span></p>
+                <button id="btn9" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/fashwash3.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="10" class="imglaytext">
+                <h4 class="imgpara fnt">Globus Natural Skin</h4>
+                <p id="cost10" class="imgpara2 fnt"> <b>₹239</b> <strike> ₹525</strike><span class="discount_off"> <b> 54% off</b></span></p>
+                <button id="btn10" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/clth4.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="11" class="imglaytext">
+                <h4 class="imgpara fnt">Baleshwer Men Black Solid</h4>
+                <p id="cost11" class="imgpara2 fnt"> <b>₹444</b> <strike> ₹1099</strike><span class="discount_off"> <b> 60% off</b></span></p>
+                <button id="btn11" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/mob5.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="12" class="imglaytext">
+                <h4 class="imgpara fnt">EXPOD 1500mAH micro usb</h4>
+                <p id="cost12" class="imgpara2 fnt"> <b>₹399</b> <strike> ₹1499</strike><span class="discount_off"> <b> 73% off</b></span></p>
+                <button id="btn12" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+      </div>
+
+
+
+      <h2 class="heading fnt">Men's Clothing</h2>
+      <div class="layout4 layout">
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/M/mclth1.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="13" class="imglaytext">
+                <h4 class="imgpara fnt">Modernity Men Orange</h4>
+                <p id="cost13" class="imgpara2 fnt"> <b>₹499</b> <strike> ₹1299</strike><span class="discount_off"> <b> 62% off</b></span></p>
+                <button id="btn13" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/M/mclth2.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="14" class="imglaytext">
+                <h4 class="imgpara fnt">Baleshwaer Men Black</h4>
+                <p id="cost14" class="imgpara2 fnt"> <b>₹444</b> <strike> ₹1099</strike><span class="discount_off"> <b> 60% off</b></span></p>
+                <button id="btn14" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/M/mclth3.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="15" class="imglaytext">
+                <h4 class="imgpara fnt">Modernity Yellow regular</h4>
+                <p id="cost15" class="imgpara2 fnt"> <b>₹499</b> <strike> ₹1299</strike><span class="discount_off"> <b> 62% off</b></span></p>
+                <button id="btn15" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/M/mclth4.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="16" class="imglaytext">
+                <h4 class="imgpara fnt">HEATEX Men High Neck</h4>
+                <p id="cost16" class="imgpara2 fnt"> <b>₹599</b> <strike> ₹2499</strike><span class="discount_off"> <b> 76% off</b></span></p>
+                <button id="btn16" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/M/mclth5.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="17" class="imglaytext">
+                <h4 class="imgpara fnt">Ragzo Men's Strecthable</h4>
+                <p id="cost17" class="imgpara2 fnt"> <b>₹2199</b> <strike> ₹4197</strike><span class="discount_off"> <b> 48% off</b></span></p>
+                <button id="btn17" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/M/mclth6.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="18" class="imglaytext">
+                <h4 class="imgpara fnt">ROARERS Olive Round</h4>
+                <p id="cost18" class="imgpara2 fnt"> <b>₹329</b> <strike> ₹1099</strike><span class="discount_off"> <b> 70% off</b></span></p>
+                <button id="btn18" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+      </div>
+
+
+      <h2 class="heading fnt">Women Fashion</h2>
+      <div class="layout5 layout">
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/F/wclth1.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="19" class="imglaytext">
+                <h4 class="imgpara fnt">Oceanista Yellow Floral</h4>
+                <p id="cost19" class="imgpara2 fnt"> <b>₹389</b> <strike> ₹1999</strike><span class="discount_off"> <b> 81% off</b></span></p>
+                <button id="btn19" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/F/wclth2.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="20" class="imglaytext">
+                <h4 class="imgpara fnt">SVB Saree Dark Blue</h4>
+                <p id="cost20" class="imgpara2 fnt"> <b>₹439</b> <strike> ₹1599</strike><span class="discount_off"> <b> 73% off</b></span></p>
+                <button id="btn20" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/F/wclth3.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="21" class="imglaytext">
+                <h4 class="imgpara fnt">Jollify Women's Stylish</h4>
+                <p id="cost21" class="imgpara2 fnt"> <b>₹199</b> <strike> ₹799</strike><span class="discount_off"> <b> 75% off</b></span></p>
+                <button id="btn21" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/F/wclth4.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="22" class="imglaytext">
+                <h4 class="imgpara fnt">Oceanista Red Solid maxy</h4>
+                <p id="cost22" class="imgpara2 fnt"> <b>₹469</b> <strike> ₹1999</strike><span class="discount_off"> <b> 77% off</b></span></p>
+                <button id="btn22" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/F/wclth5.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="23" class="imglaytext">
+                <h4 class="imgpara fnt">HEARTEX Color Block</h4>
+                <p id="cost23" class="imgpara2 fnt"> <b>₹399</b> <strike> ₹1299</strike><span class="discount_off"> <b> 69% off</b></span></p>
+                <button id="btn23" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/F/wclth6.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="24" class="imglaytext">
+                <h4 class="imgpara fnt">Oceanista Black Embellish</h4>
+                <p id="cost24" class="imgpara2 fnt"> <b>₹389</b> <strike> ₹1999</strike><span class="discount_off"> <b> 81% off</b></span></p>
+                <button id="btn24" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+      </div>
+
+
+
+      <h2 class="heading fnt">Your Gadgets Store</h2>
+      <div class="layout5 layout">
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/E/datac1.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="25" class="imglaytext">
+                <h4 class="imgpara fnt">Gionee 2.4 Amp Micro USB</h4>
+                <p id="cost25" class="imgpara2 fnt"> <b>₹149</b> <strike> ₹799</strike><span class="discount_off"> <b> 81% off</b></span></p>
+                <button id="btn25" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/E/eb1.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="26" class="imglaytext">
+                <h4 class="imgpara fnt">Digitech Wireless Earbuds</h4>
+                <p id="cost26" class="imgpara2 fnt"> <b>₹299</b> <strike> ₹2999</strike><span class="discount_off"> <b> 90% off</b></span></p>
+                <button id="btn26" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/E/cam1.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="27" class="imglaytext">
+                <h4 class="imgpara fnt">Mobile Phone 3D Screen</h4>
+                <p id="cost27" class="imgpara2 fnt"> <b>₹399</b> <strike> ₹999</strike><span class="discount_off"> <b> 60% off</b></span></p>
+                <button id="btn27" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/E/eb2.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="28" class="imglaytext">
+                <h4 class="imgpara fnt">Pronova G11 Premium</h4>
+                <p id="cost28" class="imgpara2 fnt"> <b>₹399</b> <strike> ₹3990</strike><span class="discount_off"> <b> 91% off</b></span></p>
+                <button id="btn28" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/E/wirelesseb1.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="29" class="imglaytext">
+                <h4 class="imgpara fnt">Wox TWX M28 Wirwless</h4>
+                <p id="cost29" class="imgpara2 fnt"> <b>₹599</b> <strike> ₹1599</strike><span class="discount_off"> <b> 63% off</b></span></p>
+                <button id="btn29" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+        <div class="imglay">
+            <div>
+                <img class="smimg" src="img/E/datac2.jpg" width="150px" height="150px" alt="">
+            </div>
+            <div id="30" class="imglaytext">
+                <h4 class="imgpara fnt">Pack of 2small mini Porta..</h4>
+                <p id="cost30" class="imgpara2 fnt"> <b>₹129</b> <strike> ₹599</strike><span class="discount_off"> <b> 78% off</b></span></p>
+                <button id="btn30" class="btnCart" onclick="addToCart(this)">Add to cart</button>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="layout6">
+        <h2 class="heading2 fnt">Brand Of Trust</h2>
+        <ul class="ul2 fnt">
+          <li><img class="span1" src="img/shield.png"><span>Greate Selection</span></li>
+          <li class="bdr"><img class="span1" src="img/lowprise.jfif"><span>Low Price</span></li>
+          <li><img class="span1" src="img/delivery.png"><span>Speedy Delivery</span></li>
+        </ul>
+      </div>
+
+
+      <div class="footDetail">
+        <div class="footerDiv1 fdiv">
+            <h4>Shopper Central</h4>
+            <ul>
+                <li> <a href="">Easy Returns & Replacement</a></li>
+                <li>Sign In/Register</li>
+                <li>Our Policies</li>
+                <li>CluesBucks</li>
+                <li>Payment Options</li>
+                <li>ShopClues Surety</li>
+                <li>FAQs (Help)</li>
+                <li>Service Centers</li>
+                <li>User Agreement</li>
+            </ul>
+        </div>
+        <div class="footerDiv2 fdiv">
+            <h4>Merchant Central</h4>
+            <ul>
+                <li>Merchant Panel</li>
+                <li>How To Sell</li>
+                <li>Commission Structure</li>
+                <li>Fullfillment Policy</li>
+                <li>Policies & Rules</li>
+                <li>User Agreement</li>
+                <li>Testimonials</li>
+                <li>Seller Summit</li>
+                <li>Merchant Blog</li>
+                <li>Developer Resources</li>
+            </ul>
+        </div>
+        <div class="footerDiv3 fdiv">
+            <h4>About Us</h4>
+            <ul>
+                <li>History</li>
+                <li>Band of Trust</li>
+                <li>In the News</li>
+                <li>Awards</li>
+                <li>Careers</li>
+                <li>Blogs</li>
+            </ul>
+        </div>
+        <div class="footerDiv4 fdiv">
+            <h4>Contact Us</h4>
+            <ul>
+                <li>Merchat Support</li>
+                <li>Bulk Orders</li>
+                <li>Press</li>
+            </ul>
+        </div>
+        <div class="footerDiv5 fdiv">
+            <h4>Press</h4>
+            <ul>
+                <li>In the News</li>
+            </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footdiv1">
+            <h2>Keep In Touch</h2>
+            <ul>
+                <li><a href="https://www.facebook.com/"><span class="spn1 spnn"></span></a></li>
+                <li><a href="https://in.linkedin.com/"><span class="spn2 spnn"></span></a></li>
+                <li><a href="https://twitter.com/i/flow/login"><span class="spn3 spnn"></span></a></li>
+            </ul>
+        </div>
+        <div class="footdiv2">
+            <h2>100% Secure and Trusted Payment</h2>
+            <div class="foootdiv21"></div>
+
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

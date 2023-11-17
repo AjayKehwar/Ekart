@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="signlogIn.css">
+    <script src="signlogin.js"></script>
+</head>
+
+<body>
+    <div class="trans">
+        
+        <form onsubmit="return validateForm()">
+            <div class="main signheight">
+                <h2 class="heading">SignUp Form</h2>
+                <div>
+                    <label for="username" class="form-label mx-5 mt-4">UserName:</label>
+                    <input id="username" name="username" type="text" class="inpt form-control mx-5" required>
+                </div>
+
+                <div>
+                    <label for="password" class="form-label mx-5 mt-4">Password:</label>
+                    <input id="password" name="password" type="password" class="inpt form-control mx-5" required>
+                </div>
+                <div>
+                    <label for="email" class="form-label mx-5 mt-4">Email:</label>
+                    <input id="email" name="email" type="email" class="inpt form-control mx-5" required>
+                </div>
+                <div>
+                    <label for="Phone" class="form-label mx-5 mt-4">Phone No:</label>
+                    <input id="Phone" name="Phone" type="tel" class="inpt form-control mx-5" required>
+                </div>
+                <div>
+                    <label class="form-label mx-5 mt-4 gen">Gender:</label>
+                    <input id="male" type="radio" name="gender"> <label for="male" class="gen form-label mx-2">Male:</label>
+                    <input id="feMale" type="radio" name="gender"> <label for="feMale"class="gen form-label mx-2">FeMale:</label>
+                    <span id="genderError" class="error"></span>
+                </div>
+                <input class="btn btn-primary mt-3" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
